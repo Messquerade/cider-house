@@ -1,7 +1,7 @@
 import Header from './Header';
 import CiderControl from './CiderControl';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import '../App.css';
 
 function App() {
   return (
