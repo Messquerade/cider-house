@@ -14,24 +14,45 @@ class CiderControl extends React.Component {
     }
   }
 
+  handleNewCiderToList = (newCider) => {
+    const newMainCiderList = this.state.mainCiderList.concat(newCider);
+    this.setState({
+      mainCiderList: newMainCiderList,
+      formVisibleOnPage: false
+    });
+  }
+  
+  handleClick = () => {
+    if (this.state.selectedCider != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedCider: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage
+      }));
+    }
+  }
+
   render() {
     let currentVisibleState = null;
     let buttonText = null;
     if (this.state.selectedCider != null) {
-      currentVisibleState = <CiderDetail />;
+      currentVisibleState = <CiderDetail cider={this.state.selectedCider}/>;
       buttonText = "Back to List";
     } else if (this.state.formVisibleOnPage) {
-      currentVisibleState = <NewCiderForm />;
+      currentVisibleState = <NewCiderForm onNewCiderCreation={this.handleNewCiderToList}/>;
       buttonText = "Back to List";
     } else {
-      currentVisibleState = <CiderList />;
+      currentVisibleState = <CiderList ciderList={this.state.mainCiderList}/>;
       buttonText = "Add New Cider";
     }
 
     return (
       <>
         {currentVisibleState}
-        <button className="btn">{buttonText}</button>
+        <button className="btn" onClick={this.handleClick}>{buttonText}</button>
       </>
     );
   }
