@@ -11,6 +11,7 @@ function NewCiderForm(props) {
       brand: event.target.brand.value,
       price: parseFloat(event.target.price.value),
       alcoholContent: parseFloat(event.target.alcoholContent.value),
+      quantity: parseInt(event.target.quantity.value),
       description: event.target.description.value,
       id: v4()
     });
@@ -20,18 +21,21 @@ function NewCiderForm(props) {
     <>
     <h2>Create a new Cider</h2>
     <form onSubmit={handleNewCiderFormSubmission}>
+      <label for="name">Name:</label>
       <input
         type='text'
         name='name'
         placeholder='cider name'
         className='form-control' />
         <br/>
+      <label for="brand">Brand:</label>
       <input
         type='text'
         name='brand'
         placeholder='brand of cider'
         className='form-control' />
         <br/>
+      <label for="price">Price per pint:</label>
       <input
         type='number'
         name='price'
@@ -40,6 +44,7 @@ function NewCiderForm(props) {
         step='0.01'
         className='form-control' />
         <br/>
+      <label for="alcoholContent">Alcohol Content (% per volume):</label>
       <input
         type='number'
         name='alcoholContent'
@@ -49,6 +54,16 @@ function NewCiderForm(props) {
         step='0.1'
         className='form-control' />
         <br/>
+      <label for="quantity">Available Quantity (in pints)</label>
+      <input
+        type='number'
+        name='quantity'
+        placeholder='124'
+        min='0'
+        step='1'
+        className='form-control' />
+        <br/>
+      <label for="description">Description:</label>
       <input
         type='textarea'
         name='description'
