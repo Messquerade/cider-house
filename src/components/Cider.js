@@ -20,7 +20,7 @@ function Cider(props) {
   }
 
   return (
-    <div className='cider'>
+    <div className='cider' onClick={() => props.onCiderSelect(props.id)}>
        {ciderDisplay}
     </div>
   );
@@ -32,7 +32,8 @@ Cider.propTypes = {
   price: PropTypes.number,
   quantity: PropTypes.number,
   id: PropTypes.string,
-  onBuyPint: PropTypes.func
+  onBuyPint: PropTypes.func,
+  onCiderSelect: PropTypes.func
 }
 
 export default Cider;
