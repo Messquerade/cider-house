@@ -1,8 +1,12 @@
 import React from "react";
+import CideryLogo from "./../img/cidery-logo.jpg";
 
 function Header() {
   return (
-    <h1>Harvest Moon Cider</h1>
+    <React.Fragment>
+    <img src={CideryLogo} alt="Harvest Moon Cidery"/>
+    <h1>Harvest Moon Cidery</h1>
+    </React.Fragment>
   );
 }
 
