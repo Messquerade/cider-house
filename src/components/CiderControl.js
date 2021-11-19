@@ -21,6 +21,13 @@ class CiderControl extends React.Component {
       formVisibleOnPage: false
     });
   }
+
+  handleBuyPint = (id) => {
+    let selectedCider = this.state.mainCiderList.find(cider => cider.id === id);
+    selectedCider.quantity --;
+    const newMainCiderList = this.state.mainCiderList.map((cider) => {return cider.id === id ? selectedCider : cider});
+    this.setState({mainCiderList: newMainCiderList});
+  }
   
   handleClick = () => {
     if (this.state.selectedCider != null) {
@@ -45,7 +52,7 @@ class CiderControl extends React.Component {
       currentVisibleState = <NewCiderForm onNewCiderCreation={this.handleNewCiderToList}/>;
       buttonText = "Back to List";
     } else {
-      currentVisibleState = <CiderList ciderList={this.state.mainCiderList}/>;
+      currentVisibleState = <CiderList ciderList={this.state.mainCiderList} onBuyPint={this.handleBuyPint}/>;
       buttonText = "Add New Cider";
     }
 

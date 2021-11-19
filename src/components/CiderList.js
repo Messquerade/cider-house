@@ -13,14 +13,16 @@ function CiderList(props) {
            quantity={cider.quantity}
            description={cider.description}
            id={cider.id}
-           key={cider.id} />
+           key={cider.id}
+           onBuyPint={props.onBuyPint} />
       )}
     </>
   );
 }
 
 CiderList.propTypes ={
-  ciderList: PropTypes.array
+  ciderList: PropTypes.array,
+  onBuyPint: PropTypes.func
 }
 
 export default CiderList;
