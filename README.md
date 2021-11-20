@@ -1,6 +1,34 @@
-# Getting Started with Create React App
+# Harvest Moon Ciderworks
 
+### _By Anna Clarke_
+
+A react website for a fictional cider company.
+
+## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+* React
+* Javascript
+* CSS
+* Bootstrap
+* HTML
+* webpack
+* NPM
+* jest
+* babel
+* eslint
+
+## Description
+This website is the homepage for a fictional cider company, Harvest Moon Ciderworks. Users can create ciders and view a list of available ciders. They can click on a cider to view it's details and buy a pint.
+
+## SetUp/Installation Instructions
+* Clone this repository to your desktop
+* Open in a text editor, such as VS Code
+* In top directory, type `npm install` in your terminal, to install necessary packages (this will take a couple minutes to complete)
+* type `npm run build`, to build the application
+* type `npm run start`, to view the application in your browser
+* follow instructions on website to create and buy custom ciders
+
 
 ## Available Scripts
 
@@ -14,10 +42,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -68,3 +92,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Known Bugs
+
+* state is not connected to any kind of database, so any refreshing of the browser will set state back to default
+
+## License
+
+_[MIT](https://opensource.org/licenses/MIT)_  
+
+Copyright (c) 2021 Anna Clarke
+
+## Contact Information
+
+Anna Clarke: <anclarkie@gmail.com>

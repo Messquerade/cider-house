@@ -4,8 +4,10 @@ import CideryLogo from "./../img/cidery-logo.jpg";
 function Header() {
   return (
     <React.Fragment>
-    <img src={CideryLogo} alt="Harvest Moon Cidery"/>
-    <h1>Harvest Moon Cidery</h1>
+    <div className="row">
+    <img className="col-3" src={CideryLogo} alt="Harvest Moon Cidery"/>
+    <h1 className="col-9 title">Harvest Moon Ciderworks</h1>
+    </div>
     </React.Fragment>
   );
 }
