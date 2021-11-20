@@ -1,8 +1,17 @@
+<div align="center">
+<img src="./src/img/cidery-logo.jpg" style="height: 200px">
+
 # Harvest Moon Ciderworks
 
 ### _By Anna Clarke_
 
 A react website for a fictional cider company.
+
+</div>
+
+## Components Diagram
+
+<img src="./src/img/ciderworks-component-map.jpg">
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
